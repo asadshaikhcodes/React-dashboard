@@ -28,6 +28,43 @@
   color: #61dafb;
 }
 
+.logo {
+  background: rgb(0, 186, 182);
+  color: #fff;
+}
+
+.header {
+  background: rgb(0, 167, 169);
+}
+.site-layout {
+  background-color: transparent;
+}
+[data-theme="dark"] .site-layout .site-layout-background {
+  background: #141414;
+}
+
+.ant-layout {
+  background-color: transparent;
+}
+
+.header-secondary {
+  background-color: #fff;
+  color: #282c34;
+  text-align: left;
+  border-bottom: 2px solid #eee;
+}
+
+.header-secondary h2 {
+  width: max-content;
+  margin: 0;
+}
+
+.box {
+  background-color: #fff;
+  border: 1px solid #eee;
+  height: 200px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
