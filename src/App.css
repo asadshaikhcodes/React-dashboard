@@ -29,42 +29,38 @@
 }
 
 .logo {
-  background: rgb(0, 186, 182);
-  color: #fff;
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+  text-align: center;
 }
 
-.header {
-  background: rgb(0, 167, 169);
+.logo h3{
+  color: #fff;
+  text-align: center;
 }
-.site-layout {
-  background-color: transparent;
+
+.site-layout .site-layout-background {
+  background: #fff;
 }
 [data-theme="dark"] .site-layout .site-layout-background {
   background: #141414;
 }
 
-.ant-layout {
-  background-color: transparent;
-}
-
-.header-secondary {
+.box{
+  min-height: 200px;
   background-color: #fff;
-  color: #282c34;
-  text-align: left;
-  border-bottom: 2px solid #eee;
 }
-
-.header-secondary h2 {
-  width: max-content;
-  margin: 0;
-}
-
-.box {
+.boxBig{
+  min-height: 300px;
   background-color: #fff;
-  border: 1px solid #eee;
-  height: 200px;
 }
 
+.dashboardTimeline{
+  height: 100%;
+  background-color: #fff;
+  padding: 16px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
