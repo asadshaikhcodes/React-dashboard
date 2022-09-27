@@ -58,7 +58,7 @@ function Dashboard() {
               </Layout>
             </Col>
           </Row>
-          <Row style={{ marginLeft: "0px", marginRight: "0x" }}>
+          <Row style={{ marginLeft: "0px", marginRight: "0px" }}>
             <Col span={18}>
               <Layout>
                 <Content>
