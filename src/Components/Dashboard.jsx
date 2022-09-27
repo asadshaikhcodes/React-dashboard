@@ -90,7 +90,7 @@ function Dashboard() {
           }}
         >
           <Row>
-            <Col span={18}>
+            <Col lg={18} sm={12}>
               <Row>
                 <Col span={12}>
                   <PageHeader
@@ -98,22 +98,32 @@ function Dashboard() {
                     subTitle="REPORTS AND STATISTICS "
                   />
                 </Col>
-                <Col span={12}>
+                <Col lg={12} sm={0}>
                   <Row>
                     <Col>Day</Col>
-                    <Col><Divider type="vertical"/></Col>
+                    <Col>
+                      <Divider type="vertical" />
+                    </Col>
                     <Col>Week</Col>
-                    <Col><Divider type="vertical"/></Col>
+                    <Col>
+                      <Divider type="vertical" />
+                    </Col>
                     <Col>Month</Col>
-                    <Col><Divider type="vertical"/></Col>
+                    <Col>
+                      <Divider type="vertical" />
+                    </Col>
                     <Col>Year</Col>
-                    <Col><Divider type="vertical"/></Col>
-                    <Col><DatePicker/></Col>
+                    <Col>
+                      <Divider type="vertical" />
+                    </Col>
+                    <Col>
+                      <DatePicker />
+                    </Col>
                   </Row>
                 </Col>
               </Row>
             </Col>
-            <Col span={6}>
+            <Col lg={6} sm={12}>
               <Row justify="center" align="center">
                 <Col>
                   <MailOutlined />
@@ -128,7 +138,7 @@ function Dashboard() {
                   <Divider type="vertical" />
                 </Col>
                 <Col>
-                  <Dropdown overlay={DropdownMenu} trigger={["click"]}>
+                  <Dropdown overlay={DropdownMenu} trigger={["hover"]}>
                     <a
                       onClick={(e) => e.preventDefault()}
                       style={{ background: "transparent" }}
@@ -158,12 +168,12 @@ function Dashboard() {
         </Header>
         <Content>
           <Row>
-            <Col span={18}>
+            <Col lg={18} sm={24}>
               <div style={{ padding: "16px" }}>
                 <DashboardContent />
               </div>
             </Col>
-            <Col span={6}>
+            <Col lg={6} sm={24}>
               <Card title="LATEST ACTIVITY">
                 <DashboardTimeline />
               </Card>
