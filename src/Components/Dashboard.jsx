@@ -90,41 +90,8 @@ function Dashboard() {
           }}
         >
           <Row>
-            <Col lg={18} sm={12}>
-              <Row>
-                <Col span={12}>
-                  <PageHeader
-                    title="DASHBOARD"
-                    subTitle="REPORTS AND STATISTICS "
-                  />
-                </Col>
-                <Col lg={12} sm={0}>
-                  <Row>
-                    <Col>Day</Col>
-                    <Col>
-                      <Divider type="vertical" />
-                    </Col>
-                    <Col>Week</Col>
-                    <Col>
-                      <Divider type="vertical" />
-                    </Col>
-                    <Col>Month</Col>
-                    <Col>
-                      <Divider type="vertical" />
-                    </Col>
-                    <Col>Year</Col>
-                    <Col>
-                      <Divider type="vertical" />
-                    </Col>
-                    <Col>
-                      <DatePicker />
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-            </Col>
-            <Col lg={6} sm={12}>
-              <Row justify="center" align="center">
+            <Col lg={6} sm={12} push={17}>
+              <Row justify="center" align="middle">
                 <Col>
                   <MailOutlined />
                 </Col>
@@ -169,9 +136,7 @@ function Dashboard() {
         <Content>
           <Row>
             <Col lg={18} sm={24}>
-              <div style={{ padding: "16px" }}>
-                <DashboardContent />
-              </div>
+              <DashboardContent />
             </Col>
             <Col lg={6} sm={24}>
               <Card title="LATEST ACTIVITY">
