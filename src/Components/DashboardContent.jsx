@@ -6,6 +6,7 @@ import AreaChart from "./AreaChart";
 import PieChart from "./PieChart";
 import DoughnutChart from "./DoughnutChart";
 import PolarChart from "./PolarChart";
+import DashboardTimeline from "./DashboardTimeline";
 
 function DashboardContent() {
   return (
@@ -21,7 +22,7 @@ function DashboardContent() {
           }}
         >
           <Row>
-            <Col span={24}>
+            <Col span={18}>
               <Row justify="space-between" align="middle">
                 <Col sm={24} lg={12}>
                   <PageHeader
@@ -55,63 +56,81 @@ function DashboardContent() {
                 </Col>
               </Row>
             </Col>
+            <Col span={6}>
+              <h3>LATEST ACTIVITY</h3>
+            </Col>
           </Row>
         </Layout.Header>
+        <Layout.Content>
+          <Row>
+            <Col lg={18} sm={24}>
+              <div style={{ padding: "16px" }}>
+                <Row gutter={[16, 16]}>
+                  <Col lg={12} sm={24}>
+                    <Card className="boxBig" hoverable>
+                      <Meta title="REVENUE" description="$66121" />
+                      <BarChart />
+                    </Card>
+                  </Col>
+                  <Col lg={12} sm={24}>
+                    <Card className="boxBig" title="NUMBER OF SALES" hoverable>
+                      <AreaChart />
+                    </Card>
+                  </Col>
+                  <Col lg={8} sm={24}>
+                    <Card
+                      className="box"
+                      title="AVERAGE REVENUE PER CUSTOMER"
+                      hoverable
+                    >
+                      <AreaChart />
+                    </Card>
+                  </Col>
+                  <Col lg={8} sm={24}>
+                    <Card
+                      className="box"
+                      title="AVERAGE REVENUE PER PRODUCT"
+                      hoverable
+                    >
+                      <AreaChart />
+                    </Card>
+                  </Col>
+                  <Col lg={8} sm={24}>
+                    <Card className="box" title="TOTAL REFUND" hoverable>
+                      <PieChart />
+                    </Card>
+                  </Col>
+                  <Col lg={8} sm={24}>
+                    <Card className="box" title="COMBINED REPORT" hoverable>
+                      <DoughnutChart />
+                    </Card>
+                  </Col>
+                  <Col lg={8} sm={24}>
+                    <Card
+                      className="box"
+                      title="UNIQUE NUMBER OF PRODUCS SOLD"
+                      hoverable
+                    >
+                      <PolarChart />
+                    </Card>
+                  </Col>
+                  <Col lg={8} sm={24}>
+                    <Card className="box" hoverable>
+                      <Meta title="TOTAL CUSTOMER" description="31312" />
+                      <BarChart />
+                    </Card>
+                  </Col>
+                </Row>
+              </div>
+            </Col>
+            <Col lg={6} sm={24}>
+              <Card>
+                <DashboardTimeline />
+              </Card>
+            </Col>
+          </Row>
+        </Layout.Content>
       </Layout>
-      <div style={{ padding: "16px" }}>
-        <Row gutter={[16, 16]}>
-          <Col lg={12} sm={24}>
-            <Card className="boxBig" hoverable>
-              <Meta title="REVENUE" description="$66121" />
-              <BarChart />
-            </Card>
-          </Col>
-          <Col lg={12} sm={24}>
-            <Card className="boxBig" title="NUMBER OF SALES" hoverable>
-              <AreaChart />
-            </Card>
-          </Col>
-          <Col lg={8} sm={24}>
-            <Card
-              className="box"
-              title="AVERAGE REVENUE PER CUSTOMER"
-              hoverable
-            >
-              <AreaChart />
-            </Card>
-          </Col>
-          <Col lg={8} sm={24}>
-            <Card className="box" title="AVERAGE REVENUE PER PRODUCT" hoverable>
-              <AreaChart />
-            </Card>
-          </Col>
-          <Col lg={8} sm={24}>
-            <Card className="box" title="TOTAL REFUND" hoverable>
-              <PieChart />
-            </Card>
-          </Col>
-          <Col lg={8} sm={24}>
-            <Card className="box" title="COMBINED REPORT" hoverable>
-              <DoughnutChart />
-            </Card>
-          </Col>
-          <Col lg={8} sm={24}>
-            <Card
-              className="box"
-              title="UNIQUE NUMBER OF PRODUCS SOLD"
-              hoverable
-            >
-              <PolarChart />
-            </Card>
-          </Col>
-          <Col lg={8} sm={24}>
-            <Card className="box" hoverable>
-              <Meta title="TOTAL CUSTOMER" description="31312" />
-              <BarChart />
-            </Card>
-          </Col>
-        </Row>
-      </div>
     </>
   );
 }
