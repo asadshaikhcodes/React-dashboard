@@ -9,9 +9,6 @@ import {
   Dropdown,
   Image,
   Divider,
-  Card,
-  PageHeader,
-  DatePicker,
 } from "antd";
 import {
   MailOutlined,
@@ -25,7 +22,6 @@ import {
   PieChartOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import DashboardTimeline from "./DashboardTimeline";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Transactions from "./Transactions";
 import Products from "./Products";
