@@ -175,6 +175,7 @@ const getBarChartData = () => {
         return response.json();
       })
       .then((responseData) => {
+        //calculate data by year
         responseData.data.timeline.forEach((timelineObj) => {
           if (
             new Date(timelineObj.date) > yearTwentyStart &&
@@ -222,6 +223,7 @@ const getAreaChartData = () => {
       })
       .then((responseData) => {
         console.log("response data", responseData);
+        //calculate data by year
         responseData.data.timeline.forEach((timelineObj) => {
           if (
             new Date(timelineObj.date) > yearTwentyStart &&
@@ -265,6 +267,7 @@ const getSevenDayData = async () => {
       .then((responseData) => {
         const propertyName = "new_confirmed";
         console.log("response data", responseData);
+        //get last seven days timeline from api response
         responseData.data.timeline.slice(0, 7).forEach((timelineObj) => {
           chartData.labels.push(
             new Date(timelineObj.date).toLocaleDateString()
