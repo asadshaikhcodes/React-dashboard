@@ -2,13 +2,22 @@ import React from "react";
 import { Row, Col, Card, PageHeader, Divider, DatePicker, Layout } from "antd";
 import Meta from "antd/lib/card/Meta";
 import BarChart from "./BarChart";
-import AreaChart from "./AreaChart";
+import AreaChart, { LineChart } from "./AreaChart";
 import PieChart from "./PieChart";
 import DoughnutChart from "./DoughnutChart";
 import PolarChart from "./PolarChart";
 import DashboardTimeline from "./DashboardTimeline";
+import MultiAxisChart from "./MultiAxisChart";
+import MultiTypeChart from "./MultiTypeChart";
 
-function DashboardContent() {
+function DashboardContent({
+  pieChartData,
+  barChartData,
+  areaChartData,
+  doughnutData,
+  lineChartData,
+  options,
+}) {
   return (
     <>
       <Layout>
@@ -26,8 +35,8 @@ function DashboardContent() {
               <Row justify="space-between" align="middle">
                 <Col sm={24} lg={12}>
                   <PageHeader
-                    title="DASHBOARD"
-                    subTitle="REPORTS AND STATISTICS "
+                    title="INDIA"
+                    subTitle="CORONA VIRUS Covid19 STATISTICS"
                     style={{ padding: "0px" }}
                   />
                 </Col>
@@ -64,45 +73,58 @@ function DashboardContent() {
         <Layout.Content>
           <Row>
             <Col lg={18} sm={24}>
-              <div style={{ padding: "16px" }}>
+              <div
+                style={{ padding: "16px", height: "100vh", overflowY: "auto" }}
+              >
                 <Row gutter={[16, 16]}>
                   <Col lg={12} sm={24}>
-                    <Card className="boxBig" hoverable>
-                      <Meta title="REVENUE" description="$66121" />
-                      <BarChart />
+                    <Card className="boxBig" hoverable title="Recovery By Year">
+                      <BarChart data={barChartData} />
                     </Card>
                   </Col>
                   <Col lg={12} sm={24}>
-                    <Card className="boxBig" title="NUMBER OF SALES" hoverable>
-                      <AreaChart />
+                    <Card className="boxBig" title="NEW CASES" hoverable>
+                      <LineChart data={lineChartData} options={options} />
                     </Card>
                   </Col>
                   <Col lg={8} sm={24}>
                     <Card
                       className="box"
-                      title="AVERAGE REVENUE PER CUSTOMER"
+                      title="CURRENT STATS"
                       hoverable
+                      style={{ height: "400px" }}
                     >
-                      <AreaChart />
+                      <PieChart data={pieChartData} options={options} />
                     </Card>
                   </Col>
                   <Col lg={8} sm={24}>
                     <Card
                       className="box"
-                      title="AVERAGE REVENUE PER PRODUCT"
+                      title="RECOVERY/DEATH RATE"
                       hoverable
+                      style={{ height: "400px" }}
                     >
-                      <AreaChart />
+                      <DoughnutChart data={doughnutData} options={options} />
                     </Card>
                   </Col>
                   <Col lg={8} sm={24}>
-                    <Card className="box" title="TOTAL REFUND" hoverable>
-                      <PieChart />
+                    <Card
+                      className="box linechartCard"
+                      title="Deaths By Year"
+                      hoverable
+                      style={{ height: "400px" }}
+                    >
+                      <AreaChart data={areaChartData} />
                     </Card>
                   </Col>
                   <Col lg={8} sm={24}>
-                    <Card className="box" title="COMBINED REPORT" hoverable>
-                      <DoughnutChart />
+                    <Card
+                      className="box linechartCard"
+                      title="COMBINED REPORT"
+                      hoverable
+                      style={{ height: "400px" }}
+                    >
+                      <MultiAxisChart />
                     </Card>
                   </Col>
                   <Col lg={8} sm={24}>
@@ -110,14 +132,19 @@ function DashboardContent() {
                       className="box"
                       title="UNIQUE NUMBER OF PRODUCS SOLD"
                       hoverable
+                      style={{ height: "400px" }}
                     >
                       <PolarChart />
                     </Card>
                   </Col>
                   <Col lg={8} sm={24}>
-                    <Card className="box" hoverable>
-                      <Meta title="TOTAL CUSTOMER" description="31312" />
-                      <BarChart />
+                    <Card
+                      className="box linechartCard"
+                      title="TOTAL CUSTOMER"
+                      hoverable
+                      style={{ height: "400px" }}
+                    >
+                      <MultiTypeChart />
                     </Card>
                   </Col>
                 </Row>

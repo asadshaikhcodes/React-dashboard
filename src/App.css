@@ -35,7 +35,7 @@
   text-align: center;
 }
 
-.logo h3{
+.logo h3 {
   color: #fff;
   text-align: center;
 }
@@ -47,19 +47,23 @@
   background: #141414;
 }
 
-.box{
+.box {
   height: 350px;
   background-color: #fff;
 }
-.boxBig{
-  height: 300px;
+.boxBig {
+  height: 350px;
   background-color: #fff;
 }
 
-.dashboardTimeline{
+.dashboardTimeline {
   height: 100%;
   background-color: #fff;
   padding: 16px;
+}
+
+.linechartCard .ant-card-body {
+  height: 300px;
 }
 @keyframes App-logo-spin {
   from {

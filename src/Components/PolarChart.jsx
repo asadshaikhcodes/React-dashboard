@@ -29,7 +29,7 @@ export const data = {
   ],
 };
 function PolarChart() {
-  return <PolarArea data={data} />;
+  return <PolarArea data={data}  height="300px"/>;
 }
 
 export default PolarChart;
