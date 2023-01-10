@@ -34,7 +34,7 @@ const api2 = "https://corona-api.com/countries/IN";
 const apiOptions = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "dfed0df06bmsh4fe99316af09f7ep1e4252jsn4e3a057d1b9c",
+    "X-RapidAPI-Key": "2c027a563fmshc0b3d515d7e2b2dp150d92jsn24d466a12756",
     "X-RapidAPI-Host": "covid-193.p.rapidapi.com",
   },
 };
