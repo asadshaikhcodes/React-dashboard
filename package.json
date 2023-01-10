@@ -1,7 +1,7 @@
 {
   "name": "dashboard",
   "version": "0.1.0",
-  "homepage": "https://asadshaikhcodes.github.io/React-dashboard/",
+  "homepage": "https://asadshaikhcodes.github.io/React-dashboard",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
