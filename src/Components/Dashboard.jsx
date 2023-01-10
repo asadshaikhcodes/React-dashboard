@@ -22,7 +22,7 @@ import {
   PieChartOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, HashRouter } from "react-router-dom";
 import Transactions from "./Transactions";
 import Products from "./Products";
 import Customers from "./Customers";
@@ -352,7 +352,7 @@ function Dashboard() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Layout
         style={{
           minHeight: "100vh",
@@ -467,7 +467,7 @@ function Dashboard() {
           </Content>
         </Layout>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
